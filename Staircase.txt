@@ -1,0 +1,24 @@
+package Assignment5;
+
+public class Staircase {
+	public static int arrangeCoins(int n) {
+	    int completeRows = 0;
+	    int currentRowCoins = 1;
+
+	    while (n >= currentRowCoins) {
+	        n -= currentRowCoins;
+	        completeRows++;
+	        currentRowCoins++;
+	    }
+
+	    return completeRows;
+	}
+	public static void main(String[] args) {
+		int n = 5;
+		int completeRows = arrangeCoins(n);
+		System.out.println(completeRows);
+
+	}
+
+
+}
